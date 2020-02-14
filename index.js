@@ -1,5 +1,3 @@
-// https://itnext.io/part-1-building-a-bookmark-manager-telegram-bot-node-js-vue-js-972bb7198def
-
 require('dotenv').config();
 
 const TelegramBot = require('node-telegram-bot-api');
@@ -10,16 +8,12 @@ const token = process.env.TELEGRAM_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on('message', msg => {
-  if (msg.text === 'bob!' || 'Bob!') {
-    console.log(msg);
-  bot.sendMessage(
-    msg.chat.id,
-    'Hey babe. I´m awake.\nWhat do you wanna do?\n\n/Bookmark to bookmark!'
-  );
-} else {
-  console.log(msg);
-  bot.sendMessage(msg.chat.id, 'hej');
-}
+  if (msg.text === ('bob!' || 'Bob!')) {
+    bot.sendMessage(
+      msg.chat.id,
+      'Hey babe. I´m awake.\nWhat do you wanna do?\n\n/Bookmark to bookmark!'
+    );
+  }
 });
 
 const app = firebase.initializeApp({
@@ -64,7 +58,6 @@ bot.on('callback_query', callbackQuery => {
   ogs({ url: siteUrl }, function(error, results) {
     if (results.success) {
       const res = JSON.parse(JSON.stringify(results.data));
-      console.log(results.data);
       sitesRef.push().set({
         name: res.ogSiteName || '',
         title: res.ogTitle || '',
@@ -74,7 +67,6 @@ bot.on('callback_query', callbackQuery => {
         category: callbackQuery.data || '',
         saveDate: Date.now()
       });
-      console.log(message.chat.id);
       bot.sendMessage(
         message.chat.id,
         'Added "' +
@@ -84,7 +76,6 @@ bot.on('callback_query', callbackQuery => {
           '"!'
       );
     } else {
-      console.log(results);
       bot.sendMessage(
         message.chat.id,
         'Added new website, but there was no OG data!'
