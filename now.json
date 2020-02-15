@@ -1,0 +1,26 @@
+{
+  "build": {
+    "env": {
+      "API_KEY": "@api-key",
+      "AUTH_DOMAIN": "@auth-domain",
+      "DB_URL": "@db-url",
+      "PROJECT_ID": "@project-id",
+      "STORAGE_BUCKET": "@storage-bucket",
+      "MESSAGING_SENDER_ID": "@messaging-sender-id",
+      "TELEGRAM_TOKEN": "@telegram-token",
+      "HUE_API_KEY": "@hue-api-key",
+      "HUE_IP": "@hue-ip"
+    }
+  },
+  "env": {
+    "API_KEY": "@api-key",
+    "AUTH_DOMAIN": "@auth-domain",
+    "DB_URL": "@db-url",
+    "PROJECT_ID": "@project-id",
+    "STORAGE_BUCKET": "@storage-bucket",
+    "MESSAGING_SENDER_ID": "@messaging-sender-id",
+    "TELEGRAM_TOKEN": "@telegram-token",
+    "HUE_API_KEY": "@hue-api-key",
+    "HUE_IP": "@hue-ip"
+  }
+}

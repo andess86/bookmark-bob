@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "node-hue-api": "^4.0.5",
     "node-telegram-bot-api": "^0.40.0",
     "open-graph-scraper": "^3.6.2"
+  },
+  "engines": {
+    "node": "13.2.0"
   }
 }
