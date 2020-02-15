@@ -11,6 +11,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "firebase": "^7.2.3",
+    "node-hue-api": "^4.0.5",
     "node-telegram-bot-api": "^0.40.0",
     "open-graph-scraper": "^3.6.2"
   }
